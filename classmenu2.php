@@ -64,6 +64,16 @@ function filterTable($query)
                         <tr>
                             <th scope="row">08:10~09:00</th>
                             <?php
+                                SELECT * FROM [StudentScores] /*數據源*/
+                                AS P
+                                PIVOT 
+                                (
+                                    SUM(Score/*行轉列後 列的值*/) FOR 
+                                    p.Subject/*需要行轉列的列*/ IN ([語文],[數學],[英語],[生物]/*列的值*/)
+                                ) AS T
+
+                                $query = "SELECT * FROM `classtimetable`"
+
                                 $query = "SELECT * FROM `classtable` WHERE `class` = 'IM04' AND `time` = 'A'";
 
                                 $result = filterTable($query);

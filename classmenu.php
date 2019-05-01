@@ -48,6 +48,22 @@ function filterTable($query)
 	<main role="main">
 		<div class="jumbotron">
 			<div class="col-sm-8 mx-auto">
+
+                
+
+                <?php 
+                    $query = "SELECT * FROM `classtable` WHERE `class` = 'IM04' AND `time` = 'C'";
+                    $result = filterTable($query);
+                    //$row = mysqli_fetch_array($result); 
+
+                    while($row = mysqli_fetch_array($result)):
+                        echo "<div style='color:blue'>".$row['t01']."</div>";
+                        echo $row['t02'];
+                    endwhile;
+
+                    
+                ?>
+
 				<table class="table table-hover">
 					<thead>
 						<tr>
