@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Cells Selection Using jQuery  Plugin | Tutorial</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.0.0.slim.min.js"></script>
+    
+    <script src="tablecellsselection.js"></script>
+  
+    <link rel="stylesheet" href="tablecellsselection.css">
+    <style>
+        td, th {text-align: center;}
+        .table-bordered>tbody>tr>td, .table-bordered>tbody>tr>td, .table>thead>tr>th {vertical-align: middle;}
+        .container { margin:150px auto;}
+        body { font-family:'Open Sans';}
+    </style>
+</head>
+<body>
+    
+    
+<div class="col-md-8">
+    <table class="table table-bordered table-inverse" summary="Table selection with plugin" id="tablecellsselection">
+        <thead>
+            <tr>
+                <th rowspan="1">資管四甲課表</th>
+                <th colspan="1">禮拜一</th>
+                <th colspan="1">禮拜二</th>
+                <th colspan="1">禮拜三</th>
+                <th colspan="1">禮拜四</th>
+                <th colspan="1">禮拜五</th>
+            </tr>
+            <tr>
+                <th>08:00-</th>
+                <td class="fileDiv">a1</td>
+                <td class="fileDiv">a2</td>
+                <td class="fileDiv">a3</td>
+                <td class="fileDiv">a4</td>
+                <td class="fileDiv">a5</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>09:00-</th>
+                <td class="fileDiv">b1</td>
+                <td class="fileDiv">b2</td>
+                <td class="fileDiv">b3</td>
+                <td class="fileDiv">b4</td>
+                <td class="fileDiv">b5</td>
+            </tr>
+            <tr>
+                <th>10:00-</th>
+                <td class="fileDiv">c1</td>
+                <td class="fileDiv">c2</td>
+                <td class="fileDiv">c3</td>
+                <td class="fileDiv">c4</td>   
+                <td class="fileDiv">c5</td>              
+            </tr>
+            <tr>
+                <th>11:00-</th>                
+                <td class="fileDiv">d1</td>  
+                <td class="fileDiv">d2</td>
+                <td class="fileDiv">d3</td>
+                <td class="fileDiv">d4</td>
+                <td class="fileDiv">d5</td>           
+            </tr>
+            <tr>
+                <th>中午休息</th>
+                <td colspan="7">午間用餐時間</td>    
+            </tr>
+            <tr>
+                <th>13:00-</th>
+                <td class="fileDiv">e1</td>
+                <td class="fileDiv">e2</td>
+                <td class="fileDiv">e3</td>
+                <td class="fileDiv">e4</td>
+                <td class="fileDiv">e5</td>               
+            </tr>
+            <tr>
+                <th>14:00-</th>
+                <td class="fileDiv">f1</td>
+                <td class="fileDiv">f2</td>
+                <td class="fileDiv">f3</td>
+                <td class="fileDiv">f4</td>
+                <td class="fileDiv">f5</td>
+            </tr>
+            <tr>
+                <th>15:00-</th>
+                <td class="fileDiv">g1</td>
+                <td class="fileDiv">g1</td>
+                <td class="fileDiv">g1</td>
+                <td class="fileDiv">g1</td>
+                <td class="fileDiv">g1</td>
+               
+            </tr>
+            <tr>
+                <th>16:00-</th>
+                <td class="fileDiv">h1</td>
+                <td class="fileDiv">h2</td>
+                <td class="fileDiv">h3</td>
+                <td class="fileDiv">h4</td>
+                <td class="fileDiv">h5</td>
+               
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    jQuery(document).ready(function ($) {
+        $('#tablecellsselection').tableCellsSelection();
+    });
+</script>
+
+</body>
+</html>
