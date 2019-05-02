@@ -13,7 +13,7 @@
   
     <script src="tablecellsselection.js"></script>
   
-    <!--<link rel="stylesheet" href="tablecellsselection.css">-->
+    <link rel="stylesheet" href="tablecellsselection.css">
     
 
 </head> 
@@ -193,7 +193,9 @@ td, th {text-align: center;}
 
           count++; 
 
-          selInfo += arr[i].innerHTML + "\n"; 
+          //selInfo += arr[i].innerHTML + "\n"; 
+
+          selInfo += arr[i].id + "\n";
 
         } 
 
@@ -221,8 +223,8 @@ td, th {text-align: center;}
     }
 
     function hello() {
-      alert(selInfo);
-
+      //alert(selInfo);
+      
       $.ajax({
           type:"POST",
           url:"jquery.php",
@@ -237,6 +239,7 @@ td, th {text-align: center;}
               alert("錯誤");
             }
         });
+      selInfo = "";
     }
     function cancel(){
       selInfo = ""; 
@@ -257,29 +260,29 @@ td, th {text-align: center;}
             </tr>
             <tr>
                 <th>08:00-</th>
-                <td class="fileDiv"name="a1"></td>
-                <td class="fileDiv"name="a2"></td>
-                <td class="fileDiv"name="a3"></td>
-                <td class="fileDiv"name="a4"></td>
-                <td class="fileDiv"name="a5"></td>
+                <td class="fileDiv" id="a1">1</td>
+                <td class="fileDiv" id="a2">2</td>
+                <td class="fileDiv" id="a3">3</td>
+                <td class="fileDiv" id="a4">4</td>
+                <td class="fileDiv" id="a5">5</td>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <th>09:00-</th>
-                <td class="fileDiv"name="b1"></td>
-                <td class="fileDiv"name="b2"></td>
-                <td class="fileDiv"name="b3"></td>
-                <td class="fileDiv"name="b4"></td>
-                <td class="fileDiv"name="b5"></td>
+                <td class="fileDiv" id="b1">1</td>
+                <td class="fileDiv" id="b2">2</td>
+                <td class="fileDiv" id="b3">3</td>
+                <td class="fileDiv" id="b4">4</td>
+                <td class="fileDiv" id="b5">5</td>
             </tr>
             <tr>
                 <th>10:00-</th>
-                <td class="fileDiv"name="c1"></td>
-                <td class="fileDiv"name="c2"></td>
-                <td class="fileDiv"name="c3"></td>
-                <td class="fileDiv"name="c4"></td>   
-                <td class="fileDiv"name="c5"></td>              
+                <td class="fileDiv" id="c1"></td>
+                <td class="fileDiv" id="c2"></td>
+                <td class="fileDiv" id="c3"></td>
+                <td class="fileDiv" id="c4"></td>   
+                <td class="fileDiv" id="c5"></td>              
             </tr>
             <tr>
                 <th>11:00-</th>                
