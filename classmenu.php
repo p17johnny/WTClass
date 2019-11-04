@@ -61,9 +61,9 @@ td, th {text-align: center;}
 
         var evt = window.event || arguments[0]; 
 
-        var startX = (evt.x || evt.clientX); 
+        var startX = (evt.x || evt.clientX);  //滑鼠選擇位置x position
 
-        var startY = (evt.y || evt.clientY); 
+        var startY = (evt.y || evt.clientY);  //滑鼠選擇位置y position
 
         var selDiv = document.createElement("td"); 
 
@@ -105,9 +105,7 @@ td, th {text-align: center;}
 
             selDiv.style.width = Math.abs(_x - startX) + "px"; 
 
-            selDiv.style.height = Math.abs(_y - startY) + "px"; 
-
-            // ---------------- ¹Ø¼üËã·¨ ---------------------  
+            selDiv.style.height = Math.abs(_y - startY) + "px";
 
             var _l = selDiv.offsetLeft, _t = selDiv.offsetTop; 
 
@@ -204,6 +202,7 @@ td, th {text-align: center;}
 
           selInfo += arr[i].id + "\n";
 
+          //selInfo += arr[i].innerHTML + "\n";
         } 
 
       } 
@@ -276,13 +275,7 @@ td, th {text-align: center;}
 		</div>
 	</nav>
 	<main role="main">
-		<div class="jumbotron">
-			<div class="col-sm-8">
-
-                
-
-                
-
+        <div>
 				<table class="table table-bordered">
 					<thead>
 						<tr>
@@ -453,8 +446,20 @@ td, th {text-align: center;}
 				</table>
                     <button onclick="hello()"> test </button>
                     <button onclick="cancel()">cancel</button>
+                <table class="table table-bordered">
+                    <th>A
+                        <td>1</td>
+                        <td>2</td>
+                    </th>
+                    <th>B
+                        <td>2-1</td>
+                        <td>2-2</td>
+                    </th>
+
+                </table>
 			</div>
 		</div>
+
 	</main>
 	   <script>
     jQuery(document).ready(function ($) {
